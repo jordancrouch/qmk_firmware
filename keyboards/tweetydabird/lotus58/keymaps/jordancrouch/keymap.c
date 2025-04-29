@@ -62,7 +62,7 @@ static void print_status_narrow(void) {
     // Create OLED content
     oled_write_P(PSTR("\n"), false);
     oled_write_P(PSTR(""), false);
-    oled_write_P(PSTR("JC    -21-"), false);
+    oled_write_P(PSTR("M&J   -<3-"), false);
     oled_write_P(PSTR("\n"), false);
 
     // Print current layer
