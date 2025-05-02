@@ -21,7 +21,8 @@
     "default": {
       "hue": 60,
       "sat": 255,
-      "val": 128
+      "val": 128,
+      "animation": "breathing"
     },
     "layers": {
       "enabled": true
@@ -31,7 +32,11 @@
     "split_count": [
       35,
       35
-    ]
+    ],
+    "animations": {
+      "static_light": true,
+      "breathing": true
+    }
   },
   "split": {
     "bootmagic": {
@@ -59,8 +64,7 @@
     "device_version": "1.2.3",
     "force_nkro": true,
     "pid": "0x23B0",
-    "vid": "0xFEED"
-  },
+    "vid": "0xFEED"},
   "layouts": {
     "LAYOUT": {
       "layout": [
