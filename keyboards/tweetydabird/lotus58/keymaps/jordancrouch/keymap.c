@@ -25,7 +25,7 @@ const rgblight_segment_t PROGMEM my_layer3_layer[] = RGBLIGHT_LAYER_SEGMENTS({0,
 // Define the array of RGB light layers
 const rgblight_segment_t *const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(my_layer1_layer, my_layer2_layer, my_layer3_layer);
 
-// Enables the RGB light layers
+// Startup function
 void keyboard_post_init_user(void) {
     rgblight_layers = my_rgb_layers;
 
@@ -37,9 +37,11 @@ void keyboard_post_init_user(void) {
 // Layer state handling
 layer_state_t layer_state_set_user(layer_state_t state) {
     state = update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
+
     rgblight_set_layer_state(0, layer_state_cmp(state, _LOWER));
     rgblight_set_layer_state(1, layer_state_cmp(state, _RAISE));
     rgblight_set_layer_state(2, layer_state_cmp(state, _ADJUST));
+
     return state;
 }
 
