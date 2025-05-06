@@ -17,9 +17,7 @@
     "nkro": true,
     "oled": true,
     "rgblight": true,
-    "tri_layer": true,
-    "usb_wait_for_enumeration": true,
-    "no_usb_startup_check": true
+    "tri_layer": true
   },
   "rgblight": {
     "led_count": 70,
@@ -69,7 +67,8 @@
     "device_version": "1.2.3",
     "force_nkro": true,
     "pid": "0x23B0",
-    "vid": "0xFEED"
+    "vid": "0xFEED",
+    "suspend_wakeup_delay": 200
   },
   "layouts": {
     "LAYOUT": {
