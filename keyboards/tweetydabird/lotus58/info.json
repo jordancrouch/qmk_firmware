@@ -57,9 +57,6 @@
         "modifiers": true,
         "oled": true
       }
-    },
-    "usb_detect": {
-      "enabled": true
     }
   },
   "url": "https://lectronz.com/stores/tweetys-wild-thinking",
@@ -67,8 +64,7 @@
     "device_version": "1.2.3",
     "force_nkro": true,
     "pid": "0x23B0",
-    "vid": "0xFEED",
-    "suspend_wakeup_delay": 200
+    "vid": "0xFEED"
   },
   "layouts": {
     "LAYOUT": {
