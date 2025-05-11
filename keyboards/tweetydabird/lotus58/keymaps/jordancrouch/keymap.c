@@ -9,14 +9,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[0] = LAYOUT(QK_GE
                                                               [2] = LAYOUT(KC_TRNS, KC_NO, KC_P7, KC_P8, KC_P9, KC_PSLS, KC_TRNS, KC_TRNS, KC_MPRV, KC_MNXT, KC_NO, KC_NO, KC_NO, KC_HOME, KC_TRNS, KC_HASH, KC_P4, KC_P5, KC_P6, KC_PAST, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_END, KC_TRNS, KC_AMPR, KC_P1, KC_P2, KC_P3, KC_PPLS, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, KC_PGUP, KC_TRNS, KC_DLR, KC_P0, KC_PDOT, KC_PEQL, KC_PMNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PGDN, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
                                                               [3] = LAYOUT(QK_BOOT, KC_NO, KC_NO, KC_NO, NK_TOGG, AC_TOGG, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, UG_NEXT, UG_SATU, UG_TOGG, QK_RBT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, UG_PREV, UG_SATD, KC_NO, AS_TOGG, KC_NO, KC_NO, KC_NO, KC_NO, KC_CAPS, KC_NO, KC_NO, KC_NO, UG_HUEU, UG_VALU, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, UG_HUED, UG_VALD, EE_CLR, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS)};
 
-// Override the ESCAPE_GRAVE key to send the UK_TILD key when pressed with Shift
-bool process_grave_esc_override_user(uint16_t *keycode, keyrecord_t *record) {
-    if (get_mods() & MOD_MASK_SHIFT) {
-        *keycode = UK_TILD; // Send tilde when shift is held
-    }
-    return true;
-}
-
 // RGB Light Layers
 const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 70, HSV_PURPLE});
 const rgblight_segment_t PROGMEM my_layer2_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 70, HSV_CYAN});
